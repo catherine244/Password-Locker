@@ -29,6 +29,8 @@ As a user I would like:
 
 * To completely interact with this application,you will need to sign up to have an account,then login to your account and work in there.
 
+## Technologies used
+- Python3.6
 
 ## SetUp / Installation Requirements
 
@@ -42,4 +44,16 @@ As a user I would like:
         
         $ git clone https://github.com/catherine244/Password-Locker.git
         $ cd Python-Password-Locker
+
+## Running the Application
+* To run the application, in your terminal:
+
+        $ ./run.py
+      
+        
+## Testing the Application
+* To run the tests for the class file and check if it functions well:
+
+        $ python3.6 credentials_test.py
+        
 
