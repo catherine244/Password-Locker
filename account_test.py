@@ -53,3 +53,29 @@ class TestAccount(unittest.TestCase):
 
             self.new_account.delete_account()# Deleting an account object
             self.assertEqual(len(Account.account_list),1) 
+
+    def test_find_account_by_account_name(self):
+        '''
+        test to check if we can find an account by account_name and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Test","user","abcd45678","test@user.com") # new account
+        test_account.save_account()
+
+        found_account = Account.find_by_name("Test")
+
+        self.assertEqual(found_account.email,test_account.email)  
+          
+    def test_account_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the account.
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Test","user","abcd45678","test@user.com") # new account
+        test_account.save_account()
+
+        account_exists = Account.account_exist("abcd45678")
+
+        self.assertTrue(account_exists)
