@@ -29,3 +29,17 @@ As a user I would like:
 
 * To completely interact with this application,you will need to sign up to have an account,then login to your account and work in there.
 
+
+## SetUp / Installation Requirements
+
+* python3.6
+* Good internet connection
+*  For windows users:  GitBash
+* For linux/ubuntu users : Git
+
+### Cloning
+* In your terminal:
+        
+        $ git clone https://github.com/catherine244/Password-Locker.git
+        $ cd Python-Password-Locker
+
