@@ -27,9 +27,9 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(len(Account.account_list),1)  
 
 
-    def tearDown(self):
-            '''
-            tearDown method that does clean up after each test case has run.
-            '''
-            Account.account_list = []    
+    # def tearDown(self):
+    #         '''
+    #         tearDown method that does clean up after each test case has run.
+    #         '''
+    #         Account.account_list = []    
    
