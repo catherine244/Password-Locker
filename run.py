@@ -62,3 +62,16 @@ def find_credentials(name):
     Function that finds a account by nane and returns the account
     '''
     return Credentials.find_by_name(name)    
+
+def check_existing_credentials(name):
+    '''
+    Function that check if an account exists with that name and return a Boolean
+    '''
+    return Credentials.credentials_exist(name)    
+
+def display_credentials():  
+    '''
+    Function that returns all the saved accounts
+    '''
+    return Credentials.display_credentials() 
+
