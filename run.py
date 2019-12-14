@@ -51,8 +51,14 @@ def save_credentials(credentials):
     '''
     credentials.save_credentials()
     
-    def del_credentials(credentials):
-        '''
+def del_credentials(credentials):
+    '''
     Function to delete a account
     '''
     credentials.delete_credentials()  
+    
+def find_credentials(name):
+    '''
+    Function that finds a account by nane and returns the account
+    '''
+    return Credentials.find_by_name(name)    
