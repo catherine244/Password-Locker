@@ -56,4 +56,10 @@ As a user I would like:
 
         $ python3.6 credentials_test.py
         
+## Contacts 
+  ccayreen24@gmail.com
+
+  ## License 
+  [MIT License](https://github.com/catherine244/Password-Locker//blob/master/LICENSE) [Catherine](https://github.com/catherine244). 
+
 
