@@ -5,19 +5,16 @@ from account import Account # Importing the account class
 class TestAccount(unittest.TestCase):
     def setUp(self):
        
-        self.new_account = Account("Cate","Nduku","Cate1234","catenduku995@gmail.com") # create Account object
+        self.new_account = Account(
+            'Cate', 'Nduku', 'catenduku995@@gmail.com', '0701646673', 'abc1234')
 
-    
-    def test_init(self):
-        '''
-        test_init test case to test if the object is initialized properly
-        '''
+    def test__init__(self):
+        self.assertEqual(self.new_user.first_name, 'Cate')
+        self.assertEqual(self.new_user.last_name, 'Nduku')
+        self.assertEqual(self.new_user.email, 'catenduku995@gmail.com')
+        self.assertEqual(self.new_user.phone_number, '0701646673')
+        self.assertEqual(self.new_user.password, 'abc1234')
 
-        self.assertEqual(self.new_account.account_name,"Cate")
-        self.assertEqual(self.new_account.user_name,"Nduku")
-        self.assertEqual(self.new_account.password,"Cate1234")
-        self.assertEqual(self.new_account.email,"catenduku995@gmail.com")
-        
     def test_save_account(self):
         '''
         test_save_account test case to test if the account object is saved into
@@ -39,7 +36,7 @@ class TestAccount(unittest.TestCase):
             objects to our account_list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","abcd45678","test@user.com") # new account
+            test_account = Account('Cate', 'Nduku', 'catenduku995@@gmail.com', '0701646673', 'abc1234') # new account
             test_account.save_account()
             self.assertEqual(len(Account.account_list),2)
 
@@ -48,7 +45,7 @@ class TestAccount(unittest.TestCase):
             test_delete_account to test if we can remove an account from our account list
             '''
             self.new_account.save_account()
-            test_account = Account("Test","user","abcd45678","test@user.com") # account
+            test_account = Account('Cate', 'Nduku', 'catenduku995@@gmail.com', '0701646673', 'abc1234') # account
             test_account.save_account()
 
             self.new_account.delete_account()# Deleting an account object
@@ -60,7 +57,7 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","abcd45678","test@user.com") # new account
+        test_account = Account('Cate', 'Nduku', 'catenduku995@@gmail.com', '0701646673', 'abc1234') # new account
         test_account.save_account()
 
         found_account = Account.find_by_name("Test")
@@ -73,10 +70,10 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","abcd45678","test@user.com") # new account
+        test_account = Account('Cate', 'Nduku', 'catenduku995@@gmail.com', '0701646673', 'abc1234') # new account
         test_account.save_account()
 
-        account_exists = Account.account_exist("abcd45678")
+        account_exists = Account.account_exist("abc1234")
 
         self.assertTrue(account_exists)
         
