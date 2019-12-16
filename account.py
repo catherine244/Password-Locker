@@ -34,7 +34,7 @@ class Account:
     @classmethod
     def find_by_name(cls, name):
         for account in cls.account_list:
-            if account.account_name == name:
+             if account.account_name == name:
                 return account
 
     @classmethod

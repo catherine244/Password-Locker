@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+
 from user import User
 from user import Credential
 import random
@@ -129,8 +130,10 @@ def main():
                                     letters = string.ascii_letters
                                     return ''.join(random.choice(letters) for i in range(string_length))
 
-                                print(f"Your generated password for:Site Name: {site_name}  - Account Name :{account_name}      is  ", random_string(8))
-
+                                print(
+                                    f"Your generated password for:Site Name: {site_name}  - Account Name :{account_name}      is  ",
+                                    random_string(8))
+                                break
                             elif psw_choice == 'ex':
                                 break
                             else:
