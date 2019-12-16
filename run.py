@@ -129,7 +129,8 @@ def main():
                                     letters = string.ascii_letters
                                     return ''.join(random.choice(letters) for i in range(string_length))
 
-                                print("Your generated password is >G ", random_string(8))
+                                print(f"Your generated password for:Site Name: {site_name}  - Account Name :{account_name}      is  ", random_string(8))
+
                             elif psw_choice == 'ex':
                                 break
                             else:
